@@ -68,15 +68,18 @@ function newOperator(operator) {
         setTimeout(()=>{displayNumbers(0)},400)
     }
     else if(operator.id=='equalOperand') {
-        if(lastOperator!='') {
+        if(lastOperator!='' && lastOperator!='equalOperand') {
             savedNumber=operate(lastOperator, savedNumber, newestNumber);
+            lastOperator=operator.id;
+            newestNumber='';
         }
-        else {
+        else if(lastOperator!='equalOperand'){
             savedNumber=newestNumber;
+            lastOperator=operator.id;
+            newestNumber='';
         }
         displayContent.textContent='';
         setTimeout(()=>displayNumbers(savedNumber), 100);
-        newestNumber='';
     }
     else if(operator.id=='negOperand') {
         if(newestNumber!='') {
