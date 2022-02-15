@@ -68,12 +68,12 @@ function newOperator(operator) {
         setTimeout(()=>{displayNumbers(0)},400)
     }
     else if(operator.id=='equalOperand') {
-        if(lastOperator!='' && lastOperator!='equalOperand') {
+        if(lastOperator!='' && lastOperator!='equalOperand' && newestNumber!= '') { /* newestnumber cant be empty in case somebody types " 5*9=*=" the *= or /= resulted in the total turning into 0 (as if cleared) */
             savedNumber=operate(lastOperator, savedNumber, newestNumber);
             lastOperator=operator.id;
             newestNumber='';
         }
-        else if(lastOperator!='equalOperand'){
+        else if(lastOperator!='equalOperand' && newestNumber!= ''){
             savedNumber=newestNumber;
             lastOperator=operator.id;
             newestNumber='';
@@ -119,5 +119,5 @@ function newOperator(operator) {
 
 }
 
-
+/* there is still a somewhat unimportant backspace bug: if there is already a savednumber that has been calculated and outputted with the equal sign then typing backspace shows zero until you hit equal again and then it shows the savednumber. this looks confusing.*/
 /* the newoperator function is literally ducktaped together. every time some button didnt work i added another subfunction so im suprised everything works but i guess thats what you get for less than a days work*/
