@@ -44,7 +44,7 @@ let lastOperator='';
 const numberNodeList = document.getElementsByClassName('numberType');
 const numberButtonsArray = Array.from(numberNodeList);
 for(number in numberButtonsArray) {
-    numberButtonsArray[number].addEventListener('click', (el) =>{ newNumber(el.path[0]);});
+    numberButtonsArray[number].addEventListener('click', (el) =>{ newNumber(el.target);});
 }
 
 function newNumber(element) {
@@ -56,7 +56,7 @@ function newNumber(element) {
 const operatorNodeList = document.getElementsByClassName('operatorType');
 const operatorButtonsArray = Array.from(operatorNodeList);
 for(operandor in operatorButtonsArray) {
-    operatorButtonsArray[operandor].addEventListener('click', (el) =>{ newOperator(el.path[0])});
+    operatorButtonsArray[operandor].addEventListener('click', (el) =>{ newOperator(el.target)});
 }
 
 function newOperator(operator) {
@@ -115,5 +115,6 @@ function newOperator(operator) {
     }
 
 }
+
 
 /* the newoperator function is literally ducktaped together. every time some button didnt work i added another subfunction so im suprised everything works but i guess thats what you get for less than a days work*/
