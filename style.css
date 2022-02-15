@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-color: #98ecc9; 
+    border-color: black; 
     background-color: #98ecc9;
     border-radius: 10px;
 }
