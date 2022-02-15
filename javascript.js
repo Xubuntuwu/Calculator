@@ -121,3 +121,4 @@ function newOperator(operator) {
 
 /* there is still a somewhat unimportant backspace bug: if there is already a savednumber that has been calculated and outputted with the equal sign then typing backspace shows zero until you hit equal again and then it shows the savednumber. this looks confusing.*/
 /* the newoperator function is literally ducktaped together. every time some button didnt work i added another subfunction so im suprised everything works but i guess thats what you get for less than a days work*/
+/*i should have definitely written a really well thought out pseudocode for the operator function, it would have probably been really useful here*/
