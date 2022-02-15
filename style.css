@@ -59,7 +59,7 @@ body {
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-color: black; 
+    border-color: #98ecc9; 
     background-color: #98ecc9;
     border-radius: 10px;
 }
@@ -99,6 +99,7 @@ body {
     width: 70px;
     height: 70px;
     border-radius: 10px;
+    border-color: #00ffc0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
     font-weight: bold;
