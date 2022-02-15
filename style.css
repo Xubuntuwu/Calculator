@@ -1,0 +1,131 @@
+@font-face {
+    font-family: digitalFont;
+    src: url(./fonts/digital-7.ttf);
+}
+
+* { /*THIS ALLOWS PADDING WITHOUT CHANGING WIDTH/HEIGHT/ETC  */
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+} 
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(220, 243, 235);
+}
+
+#calculatorBase {
+    height: 75%;
+    width: 30%;
+    min-width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10%;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(101,211,255,1) 0%, rgba(151,255,233,1) 50%, rgba(101,211,255,1) 100%);
+    border-color: rgb(0, 116, 90);
+    border-style: solid;
+    border-radius: 10px;
+}
+
+#display, #allButtons {
+    width: 70%;
+}
+
+#display {
+    height:30%;
+    background-color: azure;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: digitalFont;
+    max-width: 70%;
+    font-size: 70px;
+    padding-right: 7%;
+    color: #0040ff;
+    border-color: #0040ff;
+    border-style: double;
+}
+
+#allButtons {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-color: #98ecc9; 
+    background-color: #98ecc9;
+    border-radius: 10px;
+}
+
+#horizontalButtons {
+    height: 10%;
+    min-height: 70px;
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+#bottomContainer {
+    display: flex;
+    height: min-content;
+    flex-shrink: 1;
+}
+
+#numberContainer {
+    display: flex;
+    width: 75%;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+#upper-third, #middle-third, #bottom-third {
+    height: 70px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: stretch;
+}
+
+
+.buttonType {
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+
+button.numberType {
+    background-color: #00ffc0;
+    flex-grow:1;
+    height: 100%;
+}
+button.operatorType {
+    background-color: #00bfff;
+    flex-grow: 2;
+}
+
+#verticalButtons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: 25%;
+}
+
+#verticalButtons button.operatorType {
+    width: 100%;
+}
